@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Rendering Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Auto Rendering Website</h1>
+            <p class="subtitle">Dynamic content that updates in real-time</p>
+            <div class="clock" id="clock"></div>
+        </header>
+
+        <main class="main-content">
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Page Views</h3>
+                    <span class="stat-number" id="pageViews">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Time Spent</h3>
+                    <span class="stat-number" id="timeSpent">0s</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Random Number</h3>
+                    <span class="stat-number" id="randomNumber">0</span>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="card">
+                    <h2>Dynamic Color Palette</h2>
+                    <div class="color-palette" id="colorPalette"></div>
+                </div>
+
+                <div class="card">
+                    <h2>Auto-Generated Quote</h2>
+                    <blockquote id="quote" class="quote">
+                        Loading inspirational quote...
+                    </blockquote>
+                </div>
+
+                <div class="card">
+                    <h2>Live Data Visualization</h2>
+                    <div class="chart-container">
+                        <canvas id="chart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interactive-section">
+                <div class="card">
+                    <h2>Interactive Elements</h2>
+                    <div class="controls">
+                        <button class="btn" id="generateBtn">Generate New Content</button>
+                        <button class="btn" id="pauseBtn">Pause Auto-Update</button>
+                        <button class="btn" id="themeBtn">Toggle Theme</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Real-time Messages</h2>
+                    <div class="message-feed" id="messageFeed"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Auto Rendering Website - Built with HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <div class="floating-particles" id="particles"></div>
+    <script src="script.js"></script>
+</body>
+</html>
