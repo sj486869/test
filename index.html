@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Re-rendering Site (Vanilla JS)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Auto Re-rendering Demo</h1>
+    <p>State-driven UI with vanilla JS</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="clock-card">
+      <h2>Live Clock</h2>
+      <div id="clock" class="clock">--:--:--</div>
+    </section>
+
+    <section class="card" id="quote-card">
+      <h2>Auto-refreshing Quote</h2>
+      <p id="quote">Loading…</p>
+      <div class="row">
+        <button id="refresh-quote">Refresh now</button>
+        <label class="checkbox">
+          <input type="checkbox" id="auto-refresh-toggle" checked />
+          <span>Auto-refresh every 12s</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card" id="todo-card">
+      <h2>Todos</h2>
+      <form id="todo-form" autocomplete="off">
+        <input type="text" id="todo-input" placeholder="Add a todo..." />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+
+    <section class="card" id="debug-card">
+      <h2>Debug State</h2>
+      <pre id="debug-state" class="debug"></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Vanilla JS reactive store</span>
+  </footer>
+
+  <script defer src="./script.js"></script>
+  
+</body>
+</html>
+
