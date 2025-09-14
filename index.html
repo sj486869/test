@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Auto Re-rendering UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1>Auto Re-rendering UI</h1>
+        <div class="theme-controls">
+          <button id="themeToggle" class="btn" aria-label="Toggle theme">Toggle Theme</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container grid">
+      <section class="card" id="clockCard">
+        <h2>Live Clock</h2>
+        <div id="clock" class="big-text" aria-live="polite">--:--:--</div>
+      </section>
+
+      <section class="card" id="counterCard">
+        <h2>Counter</h2>
+        <div class="counter-display" aria-live="polite"><span id="countValue">0</span></div>
+        <div class="controls">
+          <button id="decrementBtn" class="btn" aria-label="Decrement">-</button>
+          <button id="incrementBtn" class="btn" aria-label="Increment">+</button>
+          <button id="resetBtn" class="btn btn-secondary" aria-label="Reset counter">Reset</button>
+        </div>
+        <div class="auto-inc">
+          <label class="checkbox">
+            <input type="checkbox" id="autoIncToggle">
+            <span>Auto increment</span>
+          </label>
+          <label class="select">
+            <span>Speed</span>
+            <select id="autoIncSpeed">
+              <option value="1000">1x (1s)</option>
+              <option value="500">2x (0.5s)</option>
+              <option value="200">5x (0.2s)</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card" id="inputCard">
+        <h2>Reactive Input</h2>
+        <input id="textInput" type="text" placeholder="Type to update preview..." class="input" autocomplete="off">
+        <p>Preview: <span id="textPreview"></span></p>
+      </section>
+
+      <section class="card" id="quotesCard">
+        <h2>Rotating Quotes</h2>
+        <blockquote id="quoteText">Loading…</blockquote>
+        <div class="muted" id="quoteAuthor"></div>
+      </section>
+
+      <section class="muted stats" id="stats">Renders: <span id="renderCount">0</span></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Built with vanilla JS reactive store</span>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">MDN</a>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
